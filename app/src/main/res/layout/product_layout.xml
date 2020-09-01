@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    app:cardElevation="15dp"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/relativelayout2"
+        >
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="Text Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/imgPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_menu_gallery"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgPic"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:text="Price"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

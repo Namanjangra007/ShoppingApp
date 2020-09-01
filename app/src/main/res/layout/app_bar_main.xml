@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_bar_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Navigation_Activity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_outline_location_on_24"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deliver to :"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:id="@+id/delivery_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deliver address"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="3dp"
+                />
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview"
+
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

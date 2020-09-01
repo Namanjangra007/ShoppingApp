@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/navigationhome"
+    tools:context=".ui.home.HomeFragment">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="15dp"
+    >
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/coloPrimaryLight"
+
+        android:id="@+id/viewpager">
+
+    </androidx.viewpager.widget.ViewPager>
+</androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_local_shipping_24"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginEnd="15dp"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free Delivery"
+                        android:textSize="30sp"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                tools:ignore="MissingConstraints">
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPagernew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout1"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </LinearLayout>
+
+</FrameLayout>

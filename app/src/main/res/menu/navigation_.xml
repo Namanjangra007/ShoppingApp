@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/search_bar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/notification"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="Notification"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/shoppint_cart"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="Shopping_cart"
+        app:showAsAction="always" />
+</menu>
